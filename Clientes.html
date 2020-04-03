@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gym Esperanza</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./fontawesome-free-5.12.0-web/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/styleparticulas.css">
+  <link rel="stylesheet" type="text/css" href="./fuentes/zig.TTF">
+  <link  rel="icon" href="./img/favicon.png" type="image/png" />
+
+
+</head>
+
+<body class="test">
+  <nav id="menu" class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #ed9239">
+    <a class="navbar-brand animated pulse"><i class="fas fa-gamepad fa-2x" style="color :black;"></i></a>
+    <label style="font-size: medium ; font-family: gamer; color: #4C1A7E; text-shadow:  0 0 12px orange;">G</label>
+    <label style="font-size: medium ; font-family: gamer; color: #7E1A7E; text-shadow:  0 0 12px orange;">y</label>
+    <label style="font-size: medium ; font-family: gamer; color: #7E1A4C; text-shadow:  0 0 12px orange;">M</label>
+    &nbsp;
+    <label style="font-size: medium ; font-family: gamer; color: #7E1A1A; text-shadow:  0 0 12px orange;">E</label>
+    <label style="font-size: medium ; font-family: gamer; color: rgb(128, 74, 21); text-shadow:  0 0 12px orange;">s</label>
+    <label style="font-size: medium ; font-family: gamer; color: #72720E; text-shadow:  0 0 12px orange;">p</label>
+    <label style="font-size: medium ; font-family: gamer; color: rgb(65, 110, 20); text-shadow:  0 0 12px orange;">e</label>
+    <label style="font-size: medium ; font-family: gamer; color: #1C741C; text-shadow:  0 0 12px orange;">r</label>
+    <label style="font-size: medium ; font-family: gamer; color: #26724C; text-shadow:  0 0 12px orange;">a</label>
+    <label style="font-size: medium ; font-family: gamer; color: #267272; text-shadow:  0 0 12px orange;">n</label>
+    <label style="font-size: medium ; font-family: gamer; color: #264C72; text-shadow:  0 0 12px orange;">z</label>
+    <label style="font-size: medium ; font-family: gamer; color: #264C72; text-shadow:  0 0 12px orange;">a</label>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-md-auto">
+        <li>
+          <!--Musica-->
+          <div class="dropdown">
+            <button class="btn dropdown-toggle font-weight-bolder" style="color: black;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Elige tu musica
+            </button>
+            <div class="dropdown-menu bg-primary" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#"><div class="text-center">
+                <button class="border-0" style="background-color: transparent;" onclick="playMusic('mario', 'btnMario')" id="btnMario"> 
+                <img src="./musica/musmario.gif" style="width: 80px; " alt=""></button>
+              </div>
+              <audio id="mario" src="./musica/mario.mp3" loop></audio> </a>
+              <a class="dropdown-item" href="#"><div class="text-center mb-1">
+                <button class="border-0" style="background-color: transparent;" onclick="playMusic('pokemon', 'btnPokemon')" id="btnPokemon" > 
+                  <img src="./musica/muspika.gif" style="width: 100px;" alt="">
+                </button>
+                
+              </div>
+              <audio id="pokemon" src="./musica/pokemon.mp3" loop></audio></a>
+              <a class="dropdown-item" href="#"><div class="text-center">
+                <button class="border-0" style="background-color: transparent;" onclick="playMusic('dragonball', 'btnDragonball')" id="btnDragonball">
+                <img  src="./musica/musdgb.gif"  style="width: 110px;" alt=""></button>
+              </div>
+              <audio id="dragonball" class="mr-2" src="./musica/dragonball.mp3" loop></audio></a>
+            </div>
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link active mr-3 animated flipInX font-weight-bolder" style="color :black; font-size:15px;" tabindex="-1" aria-disabled="true" id="Usuario"></a>
+        </li>
+        <li>
+        <!--Coins-->
+            <a><p class="mr-5 mt-2" style=" font-size: 15px; font-family: gamer; color: black;"><img src="./img/coins.gif"
+              style="width: 20px;"><span id="vidas"></span></p></a>
+        </li>
+        <li class="nav-item active">
+          <a><button class="btn animated bounceIn text-white" type="button" data-toggle="modal" data-target="#AddExit" data-whatever="@fat"><img src="./img/exit.png" alt=""></button></a>
+
+        </li>
+
+      </ul>
+    </div>
+  </nav>
+  
+
+  <h1 class=" text-center text-primary font-weight-bolder mt-5">Estás Listo para ser un Campeón?</h1>
+  <div class="container text-center">
+    <svg viewBox="0 -50 250 250">
+      <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="50%">🎮</text>
+      </symbol>
+
+      <g class="g-ants">
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+      </g>
+    </svg>
+  </div>
+  <main>
+    
+    <div class="container text-center mb-3">
+      <h1 class="my-5 bg-primary rounded-pill" style="font-size: medium; font-family: gamer;"><img src="./img/stich.gif" style="width: 50px;"></img>Tus Horarios<img src="./img/stich.gif"
+          style="width: 50px;"></img></h1>
+      
+      <div class="card-columns" id="divTurnosCliente">
+      
+      </div>
+      
+    </div>
+    
+    
+
+    <!--Comienzo de turnos-->
+
+    <div class="container text-center mt-2 mb-5">
+      <h1 class="my-5 bg-primary  rounded-pill" style="font-family: gamer; font-size: large;"><img src="./img/womanGamer.gif" style="width: 50px;"></img>Horarios<img src="./img/manGamer.gif"
+          style="width: 40px;"></img></h1>
+    
+      <div class="card-columns" id="divTurnos">
+        
+      </div>
+      <div id="gameOver">
+
+      </div>
+
+
+    <h5 class=" font-weight-bold text-center mt-5" style="font-family: gamer;">Patrocinado por:</h5>
+
+    <div class="container mt-5">
+      <div class="card-group mx-5">
+        <div class="card border-0 mt-2" style="background-color: transparent;">
+          <img src="./img/origin.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card border-0 " style="background-color: transparent; background-size: 40px;">
+          <img src="./img/steam.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card border-0 mt-3" style="background-color: transparent;">
+          <img src="./img/uplay.png" class="card-img-top" alt="...">
+        </div>
+
+      </div>
+    </div>
+    <div class="container text-center">
+      <div class="card-group mx-5">
+        <div class="card border-0 mt-5" style="background-color: transparent;" >
+          <img src="./img/rollingcodeSchool.png" class="card-img-top" alt="...">
+        </div>
+        <div class="card border-0" style="background-color: transparent;" >
+         <img src="./img/nvidia.png" class="card-img-top" alt="...">
+        </div>
+        <div cclass="card border-0 mt-5" style="background-color: transparent;">
+          <img src="./img/epic.png" class="card-img-top" alt="...">
+        </div>
+      </div>
+    </div>
+      <h5 class="text-center mt-5 font-weight-bolder" style="font-family: gamer;">Gracias por elegirnos</h5>
+  </main>
+
+  <footer id="menu" class="text-center py-3 mt-5 fixed-bottom font-weight-bolder "
+    style="background-color: #ed9239; color: black; font-family: gamer; font-size: 14px; ">Gym Esperanza - 2020 &copy
+    Todos los derechos reservados</footer>
+
+  <!--Modal exit Semana-->
+<div class="modal fade" id="AddExit" tabindex="-1" role="dialog" aria-labelledby="AddExitModal" aria-hidden="true"  >
+  <div class="modal-dialog" role="document" >
+    <div class="modal-content" style="border: 0;" >
+      <div class="modal-header" style="background-color: #ed9239; border: 0;">
+        <h5 class="modal-title" style="color: black;" id="AddExitModal">Reset Semana</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body" style="background-image: url(./img/1.jpg); background-position: top right;">
+        <h5 class="text-center text-white py-5 font-weight-bolder">Estas Seguro de salir de tu cuenta?</h5>
+      </div>
+      <div class="text-center pb-4" style="background-color: #ed9239; border: 0;">
+        <button type="button" class="btn btn-success rounded-pill mt-2 mr-2" onclick=" limpiarLsUsuarioLogueado()"><i class="fas fa-check"></i></button>
+        <button type="button" class="btn btn-danger  rounded-pill mt-2" data-dismiss="modal"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+</div>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="./js/script.js"></script>
+  <script src="./js/scriptparticulas.js"></script>
+  <script>
+    getNombreUsuario();
+  </script>
+  <script>
+    turnosRestantes();
+  </script>
+  <script>
+    turnosDiaSigte();
+    </script>
+    <script>
+      turnosCliente();
+    </script>
+</body>
+
+</html>

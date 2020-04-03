@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gym Esperanza Admin</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <link rel="stylesheet" href="./fontawesome-free-5.12.0-web/css/all.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" type="text/css" href="./fuentes/zig.TTF">
+  <link rel="icon" href="./img/favicon.png" type="image/png" />
+</head>
+
+<body class="test">
+  <nav id="menu" class="navbar navbar-expand-lg navbar-dark sticky-top" style="background-color: #ed9239;">
+    <a class="navbar-brand animated pulse"><i class="fas fa-gamepad fa-2x" style="color :black;"></i></a>
+    <a class="nav-link disabled  mr-3"
+      style="color :black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size:15px"
+      tabindex="-1" aria-disabled="true">Administrador</a>
+    <a href="index.html"><img src="./img/exit.png" alt=""></a>
+
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-md-auto ">
+        <li class="nav-item active">
+          <a class="nav-link active mr-3 animated flipInX text-black"
+            style="font-size: 15px; color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 15px;"
+            href="agregarCliente.html"><i class="fas fa-headset mr-2"></i>Clientes<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link active mr-3 animated flipInX text-black"
+            style="font-size: 15px; color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 15px;"
+            href="agregarJuegos.html"><i class="fas fa-gamepad mr-2"></i>Juegos<span class="sr-only"></span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link active mr-3 animated flipInX text-black"
+            style="font-size: 15px; color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; font-size: 15px;"
+            href="listadoJuegos.html"><i class="fas fa-clipboard-list mr-2"></i>Listado de Juegos<span
+              class="sr-only"></span></a>
+        </li>
+      </ul>
+      <!-- Agregar Cliente boton-->
+      <button class="btn mr-3 my-2 my-md-0 animated bounceIn rounded-pill text-white"
+        style="font-size: 12px;  background-color: black;" type="button" data-toggle="modal" data-target="#AddClient"
+        data-whatever="@fat"><i class="fas fa-plus-square mr-2"></i>Agregar Cliente</button>
+
+      <!-- Agregar Cliente boton-->
+      <button class="btn mr-3 my-2 my-md-0 animated bounceIn rounded-pill text-white"
+        style="font-size: 12px;  background-color: black;" type="button" data-toggle="modal" data-target="#AddReset"
+        data-whatever="@fat"><i class="far fa-calendar-times mr-2"></i>Reset Semana</button>
+
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="row row-cols-1 row-cols-md-3 mt-5 mb-5" id="listadoClientes">
+
+
+      </div>
+    </div>
+  </main>
+
+
+  <footer id="menu" class="text-center py-3 mt-5 fixed-bottom font-weight-bolder"
+    style="background-color: #ed9239; color: black; font-family: gamer; font-size: 14px; ">Gym Esperanza - 2020 &copy
+    Todos los derechos reservados</footer>
+
+  <!--Modal Agregar Cliente-->
+  <div class="modal fade" id="AddClient" tabindex="-1" role="dialog" aria-labelledby="AddClientModal"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="border: 0;">
+        <div class="modal-header" style="background-color: #ed9239; border: 0;">
+          <h5 class="modal-title" style="color: black;" id="AddClientModal">Crear Cliente</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="background-image: url(./img/1.jpg); ">
+          <form>
+            <div class="form-group">
+              <div class="container">
+                <div class="row row-cols-2">
+                  <div class="col-2 mt-1 mr-4 mr-md-0"><label class="text-white">Nombre:</label></div>
+                  <div class="col-9"><input type="text" class="form-control text-white"
+                      style="background-color: rgba(164, 164, 164, 0.7);" id="Nombre"></div>
+                  <div class="col-2 mt-3 mr-4 mr-md-0"><label class="text-white">Apellido:</label></div>
+                  <div class="col-9 mt-2"><input type="text" class="form-control text-white"
+                      style="background-color: rgba(164, 164, 164, 0.7);" id="Apellido"></div>
+                  <div class="col-2 mt-3 mr-4 mr-md-0"><label class=" text-white">Telefono:</label></div>
+                  <div class="col-9 mt-2"><input type="text" class="form-control text-white"
+                      style="background-color: rgba(164, 164, 164, 0.7);" id="Telefono"></div>
+                  <div class="col-2 mt-3 mr-4 mr-md-0"><label class="text-white">DNI:</label></div>
+                  <div class="col-9 mt-2"><input type="text" class="form-control text-white"
+                      style="background-color: rgba(164, 164, 164, 0.7);" id="DNI"></div>
+                </div>
+              </div>
+              <div class="form-group mt-4">
+                <label class="mt-1 text-white">Membresia:</label>
+                <div class="btn-group rounded-pill" style="background-color: rgba(255, 255, 255, 0.7);" role="group"
+                  aria-label="Basic example" id="Membresia">
+                  <button type="button" class="btn btn-outline-danger rounded-pill" value="Bronce"><img
+                      src="./img/bronze.png" style="max-height: 40px; max-width: 40px;" alt=""></button>
+                  <button type="button" class="btn ml-1 btn-outline-info rounded-pill" value="Plata"><img
+                      src="./img/silver.png" style="max-height: 40px; max-width: 40px;" alt=""></button>
+                  <button type="button" class="btn ml-1 btn-outline-warning rounded-pill" value="Oro"><img
+                      src="./img/oro.png" style="max-height: 40px; max-width: 40px;" alt=""></button>
+                  <button type="button" class="btn ml-1 btn-outline-dark rounded-pill" value="Champion"><img
+                      src="./img/champion.png" style="max-height: 40px; max-width: 40px;" alt=""></button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message-text" class="mt-1 text-white">Observaciones:</label>
+                <textarea class="form-control text-white" id="Observaciones"
+                  style="background-color: rgba(164, 164, 164, 0.7);"></textarea>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer" style="background-color: #ed9239; border: 0;">
+          <button type="button" class="btn text-white" style="background-color: black; font-size: 20px;"
+            onclick="crearCliente()"><i class="fas fa-save"></i></button>
+          <button type="button" style="font-size: 20px;" class="btn btn-danger" onclick="cerrarYvaciarAddClientModal()"
+            data-dismiss="modal"><i class="fas fa-times"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Modal Reset Semana-->
+  <div class="modal fade" id="AddReset" tabindex="-1" role="dialog" aria-labelledby="AddResetModal" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content" style="border: 0;">
+        <div class="modal-header" style="background-color: #ed9239; border: 0;">
+          <h5 class="modal-title" style="color: black;" id="AddResetModal">Reset Semana</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" style="background-image: url(./img/1.jpg); background-position: top right;">
+          <h5 class="text-center text-white py-5 font-weight-bolder">Estas Seguro de resetear la semana?</h5>
+        </div>
+        <div class="text-center pb-4" style="background-color: #ed9239; border: 0;">
+          <button type="button" class="btn btn-success rounded-pill mt-2 mr-2" onclick="borrarSemanaCompleta()"><i
+              class="fas fa-check"></i></button>
+          <button type="button" class="btn btn-danger  rounded-pill mt-2" data-dismiss="modal"><i
+              class="fas fa-times"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <script src="./js/script.js"></script>
+  <script>listarClientes();</script>
+  <script>
+    //Conseguir valor del btn del btn-group de '#Membresia'
+    addEventListener('load', function () {
+      // Get click event, assign button to var, and get values from that var
+      $('#Membresia button').on('click', function () {
+        let thisBtn = $(this);
+        thisBtn.addClass('active').siblings().removeClass('active');
+        let btnValue = thisBtn.val();
+        document.getElementById('Membresia').value = btnValue;
+      })
+    });
+  </script>
+</body>
+
+</html>

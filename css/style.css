@@ -1,0 +1,51 @@
+ body{
+        background-image: url("../img/fondo.png");
+        background-repeat: repeat;   
+        padding: 0;
+        margin: 0;  
+        margin-bottom: 100px;                                        
+}
+
+@font-face{
+    font-family: gamer;
+    src: url(../fuentes/zig.ttF);
+}
+
+#menu{
+    transition: all 1s ease;
+  }
+
+body::-webkit-scrollbar {
+    width: 22px;
+    background-image: url(../img/escalera.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position-x: -2px;
+        background-position-y: 0px;
+        border-radius: 1px;
+        animation: animate 6s  steps(6) infinite;
+}
+body.test::-webkit-scrollbar-thumb {
+        background-image: url(../img/climb1.png);
+}
+body.otra::-webkit-scrollbar-thumb {
+        background-image: url(../img/climb2.png);
+}
+
+.cuchun {
+    position: absolute;
+    z-index: 8000;
+    right: 0;
+    width: 25px;
+}
+.modal-open {
+    padding-right: 0px !important;
+}
+
+  
